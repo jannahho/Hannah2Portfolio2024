@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Kanit:wght@300;400&family=Poppins&family=Unbounded:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Kanit:wght@500&family=Lemon&family=Righteous&family=Rock+Salt&family=Sarala&family=Syne:wght@700;800&family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+     /* yellow */
+     /*background-color: #fffbb5;*/
+     background-color: #fffff2;
+     /* max-height: 100%; */
+     /* overflow: hidden; */
+     max-width: 100vw;
+
+}
+.maincontainer{
+    max-width: 100vw;
+
+    /* max-height: 100vh; */
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 5em 2fr;
+
+
+    /* padding-bottom: 2vw; */
+    grid-template-areas:
+    "toptext1 toptext2 toptext2"
+    "x x x"
+     ;
+
+
+}
+
+#toptext1{
+    grid-area: toptext1;
+    display: flex;
+    justify-content: start;
+    position: sticky;
+    top: 0;
+    /* padding-top: 2.2em; */
+    padding-left: 7vw;
+    font-family: 'Poppins', Sans-serif;
+}
+
+
+#toptext2{
+    grid-area: toptext2;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    /* padding-top: 2.2em; */
+    padding-right: 7vw;
+    overflow: hidden;
+}
+
+#toptext2>a{
+    padding-left: 1.5em;
+    font-family: 'Poppins', Sans-serif;
+
+}
+
+.menu{
+
+    background-color: rgb(255 255 242 / 90%);
+    /* background-color: pink; */
+}
+
+.menu>a{
+    align-self: center;
+}
+.menu>a:hover{
+    color: #595957;
+}
+
+.category{
+    font-size: 1.15vw;
+    color: black;
+    text-decoration: none;
+}
+
+.projcontainer{
+    grid-area: x;
+    max-width: 70vw;
+    /* max-height: 100vh; */
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 1fr 2fr 2fr;
+
+    /* padding-left: 11vw; */
+    padding-bottom: 10vh;
+    /* padding-top: 10vh; */
+
+    margin: auto;
+
+    grid-template-areas:
+    "header header header"
+    "one two three"
+     "four five six";
+
+     grid-gap: 3.5em;
+     align-self: center;
+
+}
+
+h1{
+    grid-area: header;
+    align-self: end;
+    justify-self: start;
+    padding-left: 11vh;
+    font-family: 'Inter', Sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */ */
+    font-weight: 600;
+    font-size: 4vw;
+    /* width: 30vw; */
+
+    /* margin: auto; */
+}
+
+.proj{
+    /* border-radius: 10%;
+    border-color: black;
+    border-width: medium;
+    border-style: solid; */
+    width: 20vw;
+    /* height: 60vh; */
+    display: flex;
+    flex-direction: column;
+}
+
+#proj1{
+        grid-area: one;
+}
+
+#proj2{
+        grid-area: two;
+}
+
+#proj3{
+        grid-area: three;
+}
+#proj4{
+        grid-area: four;
+}
+
+#proj5{
+        grid-area: five;
+}
+
+#proj6{
+        grid-area: six;
+}
+
+.imglink{
+    display: inline-block;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+    /* background-image: url(test.png); */
+    background-size: contain;
+}
+
+#img1{
+    background-image: url(htmockup.png);
+}
+
+#img2{
+    background-image: url(sweep1.png);
+}
+
+#img3{
+    background-image: url(jorvmockup2.png);
+}
+
+#img4{
+    background-image: url(codemockupsquare.png);
+}
+
+#img5{
+    background-image: url(kitchen1.jpg);
+
+}
+
+#img6{
+    background-image: url(joehousemockupsquare.png);
+}
+
+
+.image>img{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10%;
+}
+
+.title{
+    font-family: 'Inter', Sans-serif;
+
+    font-weight: 450;
+
+    color: black;
+    font-size: 1.5vw;
+
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.proj>a{
+    text-decoration: none;
+     url(...);
+}
+.proj>a:hover{
+    color: #989994;
+}
+
+
+
+
+
+.desc{
+    font-family: 'Inter', Sans-serif;
+    font-weight: 400;
+    /* word-spacing: 1.8px; */
+    color: #989994;
+    font-size: 1.5vw;
+    margin-top: -.2em;
+}

@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Kanit:wght@300;400&family=Poppins&family=Unbounded:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&family=Kanit:wght@500&family=Lemon&family=Righteous&family=Rock+Salt&family=Sarala&family=Syne:wght@700;800&family=Wallpoet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+     /* yellow */
+     /*background-color: #fffbb5;*/
+     background-color: #fffff2;
+     /* max-height: 100%; */
+     /* overflow: hidden; */
+     max-width: 100vw;
+
+}
+.maincontainer{
+    max-width: 100vw;
+
+    /* max-height: 100vh; */
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-rows: 5em 2fr 1.8fr;
+
+
+    /* padding-bottom: 2vw; */
+    grid-template-areas:
+    "toptext1 toptext2 toptext2"
+    "x x x"
+    "text text text"
+     ;
+
+}
+
+#toptext1{
+    grid-area: toptext1;
+    display: flex;
+    justify-content: start;
+    position: sticky;
+    top: 0;
+    /* padding-top: 2.2em; */
+    padding-left: 7vw;
+    font-family: 'Poppins', Sans-serif;
+}
+
+
+#toptext2{
+    grid-area: toptext2;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    /* padding-top: 2.2em; */
+    padding-right: 7vw;
+    overflow: hidden;
+}
+
+#toptext2>a{
+    padding-left: 1.5em;
+    font-family: 'Poppins', Sans-serif;
+
+}
+
+.menu{
+
+    background-color: rgb(255 255 242 / 90%);
+    /* background-color: pink; */
+}
+
+.menu>a{
+    align-self: center;
+}
+.menu>a:hover{
+    color: #595957;
+}
+
+.category{
+    font-size: 1.15vw;
+    color: black;
+    text-decoration: none;
+}
+
+.projcontainer{
+    grid-area: x;
+    max-width: 70vw;
+    /* max-height: 100vh; */
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows:1fr 2fr 1fr;
+
+    /* padding-left: 11vw; */
+    /* padding-bottom: 2vh; */
+    /* padding-top: 10vh; */
+
+    margin: auto;
+
+    grid-template-areas:
+    "header header header"
+    "big big big"
+     "small1 small2 small3";
+
+     grid-gap: 1.5em;
+     align-self: center;
+
+}
+
+.subheader{
+    grid-area: header;
+    align-self: center;
+    justify-self: start;
+    /* padding-left: 11vh; */
+    padding-bottom: 1.5em;
+    font-family: 'Inter', Sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */ */
+    font-weight: 400;
+    font-size: 1.5vw;
+    text-decoration: none;
+    color: grey;
+}
+
+.subheader:hover{
+    color: black;
+}
+
+
+h1{
+    grid-area: header;
+    align-self: end;
+    justify-self: start;
+    /* padding-left: 11vh; */
+    font-family: 'Inter', Sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */ */
+    font-weight: 600;
+    font-size: 4vw;
+}
+
+.imagebig{
+    grid-area: big;
+    background-image: url(yellowrender.png);
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+
+.imagesmall{
+    width: 20vw;
+    height: 13vw;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#small1{
+    grid-area: small1;
+}
+
+#small2{
+    grid-area: small2;
+}
+
+#small3{
+    grid-area: small3;
+}
+
+.text{
+    grid-area: text;
+    max-width: 70vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows:1fr;
+
+    padding-left: 18vw;
+    /* padding-bottom: 10vh; */
+    /* padding-top: 10vh; */
+
+    /* margin: auto; */
+
+    grid-template-areas:
+    "first second";
+
+     grid-gap: 1.5em;
+     align-self: start;
+     /* justify-content: start; */7
+}
+
+.over{
+    grid-area: first;
+}
+
+.role{
+    grid-area: second;
+}
+
+.title{
+    font-family: 'Inter', Sans-serif;
+    font-weight: 450;
+    color: black;
+    font-size: 1.5vw;
+
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+
+.desc{
+    width: 30vw;
+    font-family: 'Inter', Sans-serif;
+    font-weight: 400;
+    /* word-spacing: 1.8px; */
+    color: #989994;
+    font-size: 1.2vw;
+    line-height: 1.7em;
+}
