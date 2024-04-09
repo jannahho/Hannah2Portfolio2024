@@ -402,7 +402,8 @@ ul > li:hover {
     /* max-height: 100vh; */
     display: grid;
     grid-template-columns: 3fr 2fr 3fr;
-    grid-template-rows: 1fr .35fr;
+    /* grid-template-rows: 1fr .35fr; */
+    grid-template-rows: 1fr auto;
 
 
     /* padding-bottom: 2vw; */
@@ -528,7 +529,11 @@ h1{
   align-items: center;
   overflow: hidden;
   justify-content: start;
+  margin-bottom: 6vh;
+  margin-top: 7vh;
+
 }
+
 #animated-text-strip .marquee {
   white-space: nowrap;
   animation: marquee 10s linear infinite;

@@ -19,7 +19,7 @@ body{
     /* max-height: 100vh; */
     display: grid;
     grid-template-columns: 3fr 2fr 3fr;
-    grid-template-rows: 5em 1fr .3fr .3fr;
+    grid-template-rows: 5em 1fr .3fr auto;
 
 
     /* padding-bottom: 2vw; */
@@ -210,8 +210,8 @@ h2{
 .footer{
     grid-area: footer;
     padding-left: 11vw;
-    padding-top: 15vh;
-    padding-bottom: 0;
+    padding-top: 8vh;
+    padding-bottom: 15vh;
     height: 80%;
     align-content: end;
 }
