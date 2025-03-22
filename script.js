@@ -1,4 +1,4 @@
-// 
+//
 // var waves = new SineWaves({
 //   el: document.getElementById('waves'),
 //
@@ -180,3 +180,58 @@ function animate() {
 }
 
 animate();
+
+// stamp draw feature
+let isDrawing = false;
+let isDrawingModeActive = false;  // Track if drawing mode is active
+
+const startDrawingButton = document.getElementById('animated-text-strip');
+startDrawingButton.addEventListener('click', toggleDrawingMode);
+
+function toggleDrawingMode() {
+    if (isDrawingModeActive) {
+        stopDrawingMode();  // Turn off drawing mode and remove circles
+    } else {
+        startDrawingMode();  // Start drawing mode
+    }
+}
+
+function startDrawingMode() {
+    isDrawingModeActive = true;
+    document.body.addEventListener('mousedown', startDrawing);
+    document.body.addEventListener('mouseup', stopDrawing);
+}
+
+function stopDrawingMode() {
+    isDrawingModeActive = false;
+    document.body.removeEventListener('mousedown', startDrawing);
+    document.body.removeEventListener('mouseup', stopDrawing);
+
+    // Remove all the circles
+    const circles = document.querySelectorAll('.circle');
+    circles.forEach(circle => circle.remove());
+
+    document.body.classList.remove('no-select');  // Re-enable text/image selection
+}
+
+function startDrawing(event) {
+    isDrawing = true;
+    document.body.classList.add('no-select');  // Disable text/image selection
+    document.body.addEventListener('mousemove', drawCircle);
+}
+
+function stopDrawing() {
+    isDrawing = false;
+    document.body.removeEventListener('mousemove', drawCircle);
+}
+
+function drawCircle(event) {
+    if (!isDrawing) return;
+
+    const circle = document.createElement('div');
+    circle.classList.add('circle');
+    circle.style.left = `${event.pageX - 10}px`; // Center the circle on the mouse
+    circle.style.top = `${event.pageY - 10}px`;
+
+    document.body.appendChild(circle);
+}
