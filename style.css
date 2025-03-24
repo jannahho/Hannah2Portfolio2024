@@ -27,6 +27,8 @@ body{
   user-select: none;
 }
 
+
+
 @media only screen and (min-width: 820px) {
 
 .maincontainer{
@@ -492,7 +494,7 @@ h1{
     font-size: 1.5vw;
     /* font-size: 1.4vw; */
     /* line-height: 1.1em; */
-    
+
 
 }
 
@@ -573,6 +575,13 @@ h1{
   background: black;
   padding: 1rem 0;
 }
+
+#animated-text-strip:hover{
+  cursor: grab;
+}
+
+
+
 .marquee{
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
